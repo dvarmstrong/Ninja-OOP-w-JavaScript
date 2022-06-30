@@ -23,3 +23,16 @@ class Ninja {
         console.log(`${this.name} health is now ${this.health}`);
     }
 }
+
+// Sensei class extends Ninja class
+class Sensei extends Ninja {
+    constructor(name, health=200, speed=10, strength=10) {
+        super(name, health, speed, strength);
+        this.wisdom = 10;
+    }
+
+    speakWisdom() {
+        super.drinkSake();
+        console.log(`${this.name} says: "I am a master of the ${this.wisdom}!"`);
+    }
+}
